@@ -1,0 +1,30 @@
+<mvc:View controllerName="futbol.controller.equipos"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}"> 
+        <subHeader>
+            <Bar id="_IDGenBar1">
+                <contentLeft>
+                    <SearchField id="_IDGenSearchField1" search="busquedaEquipo"/>
+                </contentLeft>
+            </Bar>
+        </subHeader>
+        <content>
+            <List id="listaEquipos"
+                items="{/EquiposSet}"
+                headerText="{i18n>title}"
+            >
+                <items>
+                    <ObjectListItem id="_IDGenObjectListItem1"
+                        title="{NOMBRE}"
+                        type="Navigation"
+                        press="onListItemPress"
+                    >
+                        <ObjectAttribute id="_IDGenObjectAttribute1" text="{i18n>estadio} {ESTADIO}" />
+                        <ObjectAttribute id="_IDGenObjectAttribute2" text="{i18n>ciudad} {CIUDAD}" />
+                    </ObjectListItem>
+                </items>
+            </List>
+        </content>
+    </Page>
+</mvc:View>

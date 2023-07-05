@@ -1,0 +1,8 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+    <ObjectHeader id="_IDGenObjectHeader1" title="{NOMBRE} (#{EQUIPOID})" >
+        <attributes>
+            <ObjectAttribute id="_IDGenObjectAttribute3" text="{i18n>estadio} {ESTADIO}"/>
+            <ObjectAttribute id="_IDGenObjectAttribute4" text="{i18n>ciudad} {CIUDAD}"/>
+        </attributes>
+    </ObjectHeader>
+</core:FragmentDefinition>

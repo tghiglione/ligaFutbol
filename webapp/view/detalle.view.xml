@@ -1,0 +1,55 @@
+<mvc:View
+	controllerName="futbol.controller.detalle"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:t="sap.ui.table"
+	xmlns:u="sap.ui.unified"
+    xmlns:core="sap.ui.core"
+	height="100%">
+	<Page id="_IDGenPage1" showHeader="false">
+		<core:Fragment id="_IDGenFragment1" fragmentName="futbol.view.fragments.header" type="XML" />
+		<Table id="listaJugadores"
+			items="{To_Jugadores}">
+			<headerToolbar>
+				<OverflowToolbar id="_IDGenOverflowToolbar1">
+					<Title id="_IDGenTitle1" text="{i18n>jugadores}" level="H2"/>
+					<ToolbarSpacer id="_IDGenToolbarSpacer1"/>
+					<Button id="_IDGenButton1"
+						tooltip="Add"
+						icon="sap-icon://add"
+						text="{i18n>agregarJugadorTitulo}"
+						press="onOpenDialog"/>
+				</OverflowToolbar>
+			</headerToolbar>
+			<infoToolbar>
+				<OverflowToolbar id="vsdFilterBar" visible="false">
+					<Text id="vsdFilterLabel" />
+				</OverflowToolbar>
+			</infoToolbar>
+			<columns>
+				<Column id="product" width="12em" headerMenu="columnHeaderMenu"><Text id="_IDGenText1" text="{i18n>apellido}" /></Column>
+				<Column id="_IDGenColumn1" minScreenWidth="Tablet" demandPopin="true"><Text id="_IDGenText2" text="{i18n>nombre}" /></Column>
+				<Column id="_IDGenColumn2" minScreenWidth="Tablet" demandPopin="true" hAlign="End"><Text id="_IDGenText3" text="{i18n>edad}" /></Column>
+				<Column id="_IDGenColumn3" minScreenWidth="Tablet" demandPopin="true" hAlign="Center"><Text id="_IDGenText4" text="{i18n>posicion}" /></Column>
+				<Column id="_IDGenColumn4" hAlign="End"><Text id="_IDGenText5" text="{i18n>eliminar}" /></Column>
+			</columns>
+			<items>
+				<ColumnListItem id="_IDGenColumnListItem1" vAlign="Middle">
+					<cells>
+						<ObjectIdentifier id="_IDGenObjectIdentifier1" title="{APELLIDO}"/>
+						<Text id="_IDGenText6" text="{NOMBRE}" />
+						<ObjectNumber id="_IDGenObjectNumber1" number="{EDAD}" 
+									state="{path:'EDAD', formatter: '.formatter.edadState'}"/>
+						<Text id="_IDGenText8" text="{POSICION}" />	
+						<Button id="_IDGenButtonDelete"
+						tooltip="Delete"
+						icon="sap-icon://delete"
+						press="deletePlayer"
+						type="Reject"
+						/>
+					</cells>
+				</ColumnListItem>
+			</items>
+		</Table>
+	</Page>
+</mvc:View>

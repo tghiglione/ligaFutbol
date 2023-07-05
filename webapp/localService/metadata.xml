@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="ZGW_FUTBOL_SRV" xml:lang="es" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="Equipos" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="EQUIPOID"/>
+                </Key>
+                <Property Name="EQUIPOID" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Id" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="NOMBRE" Type="Edm.String" Nullable="false" MaxLength="35" sap:unicode="false" sap:label="Nombre" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="CIUDAD" Type="Edm.String" Nullable="false" MaxLength="55" sap:unicode="false" sap:label="Ciudad" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ESTADIO" Type="Edm.String" Nullable="false" MaxLength="55" sap:unicode="false" sap:label="Estadio" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="Jugadores" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="JUGADORID"/>
+                </Key>
+                <Property Name="EQUIPOID" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="EquipoId" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="JUGADORID" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="JugadorId" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="NOMBRE" Type="Edm.String" Nullable="false" MaxLength="35" sap:unicode="false" sap:label="Nombre" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="APELLIDO" Type="Edm.String" Nullable="false" MaxLength="35" sap:unicode="false" sap:label="Apellido" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="EDAD" Type="Edm.Int16" Nullable="false" sap:unicode="false" sap:label="Edad" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="POSICION" Type="Edm.String" Nullable="false" MaxLength="35" sap:unicode="false" sap:label="Posicion" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityContainer Name="ZGW_FUTBOL_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="EquiposSet" EntityType="ZGW_FUTBOL_SRV.Equipos" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="JugadoresSet" EntityType="ZGW_FUTBOL_SRV.Jugadores" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+            </EntityContainer>
+            <atom:link rel="self" href="http://stks4hpil.eastus2.cloudapp.azure.com:8002/sap/opu/odata/sap/ZGW_FUTBOL_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="http://stks4hpil.eastus2.cloudapp.azure.com:8002/sap/opu/odata/sap/ZGW_FUTBOL_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
