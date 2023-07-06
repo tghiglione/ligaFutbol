@@ -10,10 +10,10 @@
             <Select id="selectPosicion"
                     forceSelection="true"
                     selectedKey="Arquero">
-                <core:Item id="_IDGenItem1" key="1" text="Arquero" />
-                <core:Item id="_IDGenItem2" key="2" text="Defensor" />
-                <core:Item id="_IDGenItem3" key="3" text="Mediocampista" />
-                <core:Item id="_IDGenItem4" key="4" text="Delantero" />
+                <core:Item id="_IDGenItem1" key="1" text="{i18n>arquero}" />
+                <core:Item id="_IDGenItem2" key="2" text="{i18n>defensor}" />
+                <core:Item id="_IDGenItem3" key="3" text="{i18n>mediocampista}" />
+                <core:Item id="_IDGenItem4" key="4" text="{i18n>delantero}" />
             </Select>	
         </VBox>
         <beginButton>
